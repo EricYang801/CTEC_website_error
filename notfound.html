@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>404</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+</head>
+
+<body>
+    <div id="root"></div>
+</body>
+<script type="text/babel">
+    const backgroundimg = 'https://cdn.discordapp.com/attachments/1005190123073318923/1207257425388900352/image.png?ex=65defd17&is=65cc8817&hm=55d735344b03556c02f1d4eeba96c97d72d4f1026df83b0ee13b81f959a92bb4';
+
+    const imgStyle = {
+        width: '100%',
+        height: '100%',
+        objectFit: 'cover',
+        position: 'absolute',
+        top: '0',
+        left: '0',
+        zIndex: '0',
+    };
+
+    const overlayStyle = {
+        backgroundColor: 'rgba(0, 0, 0, 0.2)',
+        position: 'absolute',
+        top: '0',
+        left: '0',
+        width: '100%',
+        height: '100%',
+        zIndex: '1',
+    };
+
+    const textStyle = {
+        position: 'relative',
+        zIndex: '2',
+        textAlign: 'center',
+        padding: '0 30%',
+        color: 'white',
+
+    };
+
+    const errorpages = (
+        <div id="404">
+            <img src={backgroundimg} alt="main storage is fired" style={imgStyle} />
+            <div style={overlayStyle}></div>
+            <div style={textStyle}>
+                <h1>Not Found</h1>
+                <p>Sorry, the page you are looking for is not found.</p>
+            </div>
+        </div>
+    );
+
+    const divRoot = ReactDOM.createRoot(document.getElementById('root'));
+    divRoot.render(errorpages);
+</script>
+
+</html>
